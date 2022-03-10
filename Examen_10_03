@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+class persona{
+private:
+	string nombre;
+	string dni;
+	int edad;
+public:
+	persona (string nombre = "nombre", string dni = "dni", int edad = 18){
+		setNombre(nombre);
+		setDni(dni);
+		this->edad = edad;
+		setEdad(edad);
+	}
+
+	void setNombre(string nuevoNombre){
+		this->nombre = nuevoNombre;
+	}
+	void setDni(string nuevoDni){
+		this->dni = nuevoDni;
+	}
+	void setEdad(int nuevaEdad){
+		this->edad = nuevaEdad;
+	}
+
+	string getNombre(){
+		return this->nombre;
+	}
+	string getDni(){
+		return this->dni;
+	}
+	int getEdad(){
+		return this->edad;
+	}
+	void imprimirDatos(){
+		cout << "Me llamo " << this->nombre << ", tengo " << this->edad << " agnos y mi DNI es " << this->dni << endl;
+	}
+	bool mayorDeEdad(int edad){
+		return (edad >= 18);
+	}
+};
+
+int main (){
+
+	persona pablo;
+
+	pablo.setNombre("Pablo");
+	pablo.setDni("74686866R");
+	pablo.setEdad(37);
+
+
+	pablo.imprimirDatos();
+
+
+
+	return 0;
+}
